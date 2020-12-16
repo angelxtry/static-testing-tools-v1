@@ -7,7 +7,7 @@
     "build": "babel src --extensions .js,.ts --out-dir dist",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
     "check-types": "tsc",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts)\"",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
     "validate": "yarn check-types && yarn check-format && yarn lint && yarn build"
