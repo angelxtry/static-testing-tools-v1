@@ -1,0 +1,28 @@
+{
+  "name": "static-testing-tools-v1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --extensions .js,.ts --out-dir dist",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
+    "check-types": "tsc",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts)\"",
+    "format": "yarn prettier --write",
+    "check-format": "yarn prettier --list-different",
+    "validate": "yarn check-types && yarn check-format && yarn lint && yarn build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "husky": "^4.3.6",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  }
+}
